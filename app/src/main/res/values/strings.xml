@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TestApplication</string>
+    <string name="custom_looper">Custom Looper</string>
+    <string name="remote_binding">Remote Binding</string>
+    <string name="local_binding">Local Binding</string>
+    <string name="services">Services</string>
+    <string name="thread">Thread</string>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".services.localBinding.LocalActivity">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/services"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_20"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="20dp"/>
+
+
+    <Button
+        android:id="@+id/btnLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/local_binding"
+        android:textSize="@dimen/sp_16"
+        android:padding="@dimen/dp_15"
+        android:textColor="@android:color/black" />
+
+   <Button
+        android:id="@+id/btnRemote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remote_binding"
+       android:textSize="@dimen/sp_16"
+       android:padding="@dimen/dp_15"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/thread"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_20"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnLooper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/custom_looper"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>
