@@ -4,6 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -19,30 +20,30 @@ public class MyLocalService extends Service {
         }
     }
 
-    MyServer myServer=new MyServer();
+    MyServer myServer = new MyServer();
 
     @Override
     public IBinder onBind(Intent intent) {
-        System.out.println(":::: Bind");
+        Toast.makeText(getApplicationContext(),"Service Bind", Toast.LENGTH_SHORT).show();
         return myServer;
     }
 
     @Override
     public boolean onUnbind(Intent intent) {
-        System.out.println(":::: UnBind");
+        Toast.makeText(getApplicationContext(),"Service UnBind", Toast.LENGTH_SHORT).show();
         return super.onUnbind(intent);
     }
 
     @Override
     public void onRebind(Intent intent) {
-        System.out.println(":::: ReBind");
-
+        Toast.makeText(getApplicationContext(),"Service ReBind", Toast.LENGTH_SHORT).show();
         super.onRebind(intent);
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        System.out.println(":::: Service Start");
+        Toast.makeText(getApplicationContext(),"Service Start", Toast.LENGTH_SHORT).show();
+
 
         new Thread(new Runnable() {
             @Override
@@ -57,8 +58,7 @@ public class MyLocalService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-
-        System.out.println(":::: Service Stop");
+        Toast.makeText(getApplicationContext(),"Service Stop", Toast.LENGTH_SHORT).show();
          stopRandomNoGenerator();
     }
 
